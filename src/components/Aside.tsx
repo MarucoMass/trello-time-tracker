@@ -18,14 +18,14 @@ const Aside = () => {
   const name = "Maruco";
   return (
     <aside id="aside" className="w-1/4 max-w-64 h-dvh bg-muted">
-      <div id="user" className="flex items-center p-3 gap-2">
+      <div id="user" className="flex items-center p-3 gap-2 h-16">
         <Avatar className="size-8">
           <div className="w-full h-full bg-foreground text-background text-lg font-semibold flex items-center justify-center">
             {name[0].toUpperCase()}
           </div>
         </Avatar>
         <div className=" flex flex-col">
-          <h2 className="text-sm font-bold">{name}</h2>
+          <h2 className="text-sm font-semibold">{name}</h2>
           <span className="text-xs italic">Gratuito</span>
         </div>
       </div>

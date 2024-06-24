@@ -1,11 +1,15 @@
 type Props = {
-    children: React.ReactNode
+  children: React.ReactNode;
+  className?: string;
 }
 
-const BoardOption = ({children}:Props) => {
+const BoardOption = ({ children, className = "" }: Props) => {
+  const isVisible = className.includes('visible');
   return (
-    <div className="board-options invisible p-1 hover:bg-gray-300/60 hover:shadow">
-        {children}
+    <div className={
+      `board-options cursor-pointer ${isVisible ? "" : "invisible"} 
+      p-1 hover:bg-gray-300/60 hover:shadow ${className}`}>
+      {children}
     </div>
   )
 }
